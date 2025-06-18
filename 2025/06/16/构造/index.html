@@ -27,7 +27,7 @@
 <meta property="og:description" content="Problem - 2115B - Codeforces​	$a_z&#x3D;\min(a_x,a_y)$ 的必要条件为 $a_z\leq a_x $ 且 $a_z\leq a_y$  ​	考虑如何满足这个条件，容易想到倒序执行 $a_x:&#x3D;\max(a_x,a_z),a_y:&#x3D;\max(a_y,a_z)$  ​	当 $z$ 和 $x,y$ 均不相同时，原操作前的 $a_z$">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-06-16T00:44:16.000Z">
-<meta property="article:modified_time" content="2025-06-16T01:32:19.073Z">
+<meta property="article:modified_time" content="2025-06-18T01:40:12.087Z">
 <meta property="article:author" content="LittleGPC">
 <meta name="twitter:card" content="summary">
 
@@ -133,7 +133,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-2115B-Codeforces"><span class="nav-number">1.</span> <span class="nav-text">Problem - 2115B - Codeforces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-2114G-Codeforces"><span class="nav-number">2.</span> <span class="nav-text">Problem - 2114G - Codeforces</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-2115B-Codeforces"><span class="nav-number">1.</span> <span class="nav-text">Problem - 2115B - Codeforces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-2114G-Codeforces"><span class="nav-number">2.</span> <span class="nav-text">Problem - 2114G - Codeforces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-2111F-Codeforces"><span class="nav-number">3.</span> <span class="nav-text">Problem - 2111F - Codeforces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-2106G1-Codeforces"><span class="nav-number">4.</span> <span class="nav-text">Problem - 2106G1 - Codeforces</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-2106G2-Codeforces"><span class="nav-number">5.</span> <span class="nav-text">Problem - 2106G2 - Codeforces</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Lemma%EF%BC%9A"><span class="nav-number">5.0.1.</span> <span class="nav-text">Lemma：</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -202,9 +202,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-06-16 08:44:16 / 修改时间：09:32:19" itemprop="dateCreated datePublished" datetime="2025-06-16T08:44:16+08:00">2025-06-16</time>
+      <time title="创建时间：2025-06-16 08:44:16" itemprop="dateCreated datePublished" datetime="2025-06-16T08:44:16+08:00">2025-06-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-06-18 09:40:12" itemprop="dateModified" datetime="2025-06-18T09:40:12+08:00">2025-06-18</time>
     </span>
 
   
@@ -218,11 +224,17 @@
     
     <div class="post-body" itemprop="articleBody"><h3 id="Problem-2115B-Codeforces"><a href="#Problem-2115B-Codeforces" class="headerlink" title="Problem - 2115B - Codeforces"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/2115/B">Problem - 2115B - Codeforces</a></h3><p>​	$a_z&#x3D;\min(a_x,a_y)$ 的必要条件为 $a_z\leq a_x $ 且 $a_z\leq a_y$ </p>
 <p>​	考虑如何满足这个条件，容易想到倒序执行 $a_x:&#x3D;\max(a_x,a_z),a_y:&#x3D;\max(a_y,a_z)$ </p>
-<p>​	当 $z$ 和 $x,y$ 均不相同时，原操作前的 $a_z$ 被覆盖，此刻想要通过上述操作还原，需令 $a_z:&#x3D;0$</p>
+<p>​	当 $z$ 和 $x,y$ 均不相同时，原操作前的 $a_z$ 被覆盖，此刻想要通过上述操作还【】原，需令 $a_z:&#x3D;0$</p>
 <p>​	注意此时的构造仅满足必要条件，需执行原操作验证构造是否正确。</p>
 <h3 id="Problem-2114G-Codeforces"><a href="#Problem-2114G-Codeforces" class="headerlink" title="Problem - 2114G - Codeforces"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/2114/G">Problem - 2114G - Codeforces</a></h3><p>​	枚举第一个放入的数之后，操作的最大次数 $maxn$ 容易求出</p>
 <p>​	容易观察或证明到 $k\leq maxn$ 时一定有解	</p>
 <p>​	（求 $maxn$ 时需要防止两个目标不同的数合并）</p>
+<h3 id="Problem-2111F-Codeforces"><a href="#Problem-2111F-Codeforces" class="headerlink" title="Problem - 2111F - Codeforces"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/2111/F">Problem - 2111F - Codeforces</a></h3><p>枚举周长后容易构造</p>
+<h3 id="Problem-2106G1-Codeforces"><a href="#Problem-2106G1-Codeforces" class="headerlink" title="Problem - 2106G1 - Codeforces"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/2106/G1">Problem - 2106G1 - Codeforces</a></h3><p>若1是根，易求出解，否则操作使得 $a_1+a_{rt}&#x3D;0$ ，然后就可以求解</p>
+<h3 id="Problem-2106G2-Codeforces"><a href="#Problem-2106G2-Codeforces" class="headerlink" title="Problem - 2106G2 - Codeforces"></a><a target="_blank" rel="noopener" href="https://codeforces.com/problemset/problem/2106/G2">Problem - 2106G2 - Codeforces</a></h3><p>考虑先求出根</p>
+<h5 id="Lemma："><a href="#Lemma：" class="headerlink" title="Lemma："></a>Lemma：</h5><p>​	对于点 $x$ 的相邻节点集合 $S$ ，取 $Q\subseteq S$ ，若 flip(x) 前后对 $Q$ 的询问差的绝对值为 $2*|Q|$ ，则 $fa_x\notin Q$</p>
+<p>由 <strong>Lemma</strong> ，可以二分求出 $fa_x$ 或得知 $x$ 是根</p>
+<p>每次 $x$ 取剩余树的重心显然最优</p>
 
     </div>
 
